@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/Resume_Michael_Beebower.pdf";
+import pdf from "../../Assets/Resume_Shudhanshu_Shree.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const resumeLink =
-  "https://raw.githubusercontent.com/beebus/portfolio/master/src/Assets/Resume_Michael_Beebower.pdf";
+  "https://drive.google.com/file/d/1EZyBL1jFY0YCiKfH66ulp7xszSS7ysVC/view?usp=sharing";
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
@@ -25,11 +25,11 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button variant="primary" href={pdf} target="_blank">
             <AiOutlineDownload />
-            &nbsp;Download Resume
+            &nbsp;View Resume
           </Button>
         </Row>
 
-        <Row className="resume">
+        {/* <Row className="resume">
           <Document file={resumeLink}>
             <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
           </Document>
@@ -40,7 +40,7 @@ function ResumeNew() {
             <AiOutlineDownload />
             &nbsp;Download Resume
           </Button>
-        </Row>
+        </Row> */}
       </Container>
     </div>
   );
